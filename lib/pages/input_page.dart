@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_bmi/widgets.dart';
 
@@ -51,12 +50,23 @@ class InputPage extends StatelessWidget {
               ],
             ),
           ),
+          //Botón
+          Container(
+            height: 80.0,
+            width: double.infinity,
+            margin: const EdgeInsets.only(top: 12.0),
+            color: const Color(0xffAB4FEE),
+            alignment: Alignment.center,
+            child: const Text(
+              "CALCULATE",
+              style: TextStyle(
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 }
-
-
-
-
