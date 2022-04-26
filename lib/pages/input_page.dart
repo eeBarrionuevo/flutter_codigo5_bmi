@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_bmi/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InputPage extends StatelessWidget {
   const InputPage({Key? key}) : super(key: key);
@@ -20,12 +21,40 @@ class InputPage extends StatelessWidget {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    childCard: Text("Hola"),
+                    childCard: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FaIcon(FontAwesomeIcons.mars, size: 60.0),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          "MALE",
+                          style: TextStyle(
+                            fontSize: 22.0,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    childCard: Text("Hola"),
+                    childCard: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FaIcon(FontAwesomeIcons.venus, size: 60.0),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          "FEMALE",
+                          style: TextStyle(
+                            fontSize: 22.0,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
