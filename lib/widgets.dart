@@ -3,8 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ReusableCard extends StatelessWidget {
   Widget childCard;
+  Color color;
   ReusableCard({
     required this.childCard,
+    required this.color,
   });
 
   @override
@@ -12,13 +14,15 @@ class ReusableCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: Color(0xff1F232C),
+        color: color,
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: childCard,
     );
   }
 }
+
+
 
 class IconContent extends StatelessWidget {
   String textIcon;
