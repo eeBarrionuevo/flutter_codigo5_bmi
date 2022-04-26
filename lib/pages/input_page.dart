@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo5_bmi/widgets.dart';
 
 class InputPage extends StatelessWidget {
   const InputPage({Key? key}) : super(key: key);
@@ -59,15 +60,3 @@ class InputPage extends StatelessWidget {
 
 
 
-class ReusableCard extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(10.0),
-      decoration: BoxDecoration(
-        color: Colors.deepPurple,
-        borderRadius: BorderRadius.circular(12.0),
-      ),
-    );
-  }
-}
