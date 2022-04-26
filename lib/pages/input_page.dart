@@ -19,10 +19,14 @@ class InputPage extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    childCard: Text("Hola"),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    childCard: Text("Hola"),
+                  ),
                 ),
               ],
             ),
@@ -32,7 +36,9 @@ class InputPage extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    childCard: Container(),
+                  ),
                 ),
               ],
             ),
@@ -42,10 +48,14 @@ class InputPage extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    childCard: Center(),
+                  ),
                 ),
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    childCard: Container(),
+                  ),
                 ),
               ],
             ),
