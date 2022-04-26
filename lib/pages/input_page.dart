@@ -21,12 +21,18 @@ class InputPage extends StatelessWidget {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    childCard: IconContent(),
+                    childCard: IconContent(
+                      textIcon: "MALE",
+                      icon: FontAwesomeIcons.mars,
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    childCard: IconContent(),
+                    childCard: IconContent(
+                      textIcon: "FEMALE",
+                      icon: FontAwesomeIcons.venus,
+                    ),
                   ),
                 ),
               ],
@@ -82,27 +88,3 @@ class InputPage extends StatelessWidget {
   }
 }
 
-class IconContent extends StatelessWidget {
-  const IconContent({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        FaIcon(FontAwesomeIcons.mars, size: 60.0),
-        SizedBox(
-          height: 10.0,
-        ),
-        Text(
-          "MALE",
-          style: TextStyle(
-            fontSize: 22.0,
-          ),
-        ),
-      ],
-    );
-  }
-}
