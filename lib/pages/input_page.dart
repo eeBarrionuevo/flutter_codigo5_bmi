@@ -8,50 +8,65 @@ class InputPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        // backgroundColor: Colors.deepPurple,
         title: Text("BMI Calculator"),
         centerTitle: true,
       ),
       body: Column(
         children: [
-
           //Primera fila
           Expanded(
             child: Row(
               children: [
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple,
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                  ),
+                  child: ReusableCard(),
                 ),
                 Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple,
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple,
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                  ),
+                  child: ReusableCard(),
                 ),
               ],
             ),
           ),
-
-          
+          //Segunda fila
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: ReusableCard(),
+                ),
+              ],
+            ),
+          ),
+          //Tercera fila
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: ReusableCard(),
+                ),
+                Expanded(
+                  child: ReusableCard(),
+                ),
+              ],
+            ),
+          ),
         ],
+      ),
+    );
+  }
+}
+
+
+
+
+class ReusableCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.all(10.0),
+      decoration: BoxDecoration(
+        color: Colors.deepPurple,
+        borderRadius: BorderRadius.circular(12.0),
       ),
     );
   }
