@@ -81,6 +81,12 @@ class _InputPageState extends State<InputPage> {
                       children: [
                         Text(
                           "HEIGHT",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10.0,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -90,13 +96,9 @@ class _InputPageState extends State<InputPage> {
                             Text(
                               height.toString(),
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 40.0
-                              ),
+                                  fontWeight: FontWeight.bold, fontSize: 40.0),
                             ),
-                            Text(
-                              " cm"
-                            ),
+                            Text(" cm"),
                           ],
                         ),
                         Slider(
@@ -122,7 +124,46 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: kCardColor,
-                    childCard: Center(),
+                    childCard: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "WEIGHT",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                          ),
+                        ),
+                        Text(
+                          "76",
+                          style: TextStyle(
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RawMaterialButton(
+                              shape: CircleBorder(),
+                              fillColor: Colors.red,
+                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
+                              child: FaIcon(FontAwesomeIcons.plus),
+                              onPressed: () {},
+                            ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
+                            RawMaterialButton(
+                              shape: CircleBorder(),
+                              fillColor: Colors.red,
+                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
+                              child: FaIcon(FontAwesomeIcons.minus),
+                              onPressed: () {},
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
