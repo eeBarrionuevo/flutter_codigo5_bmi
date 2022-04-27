@@ -129,7 +129,7 @@ class _InputPageState extends State<InputPage> {
                     childCard: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "WEIGHT",
                           style: TextStyle(
                             fontSize: 20.0,
@@ -137,7 +137,7 @@ class _InputPageState extends State<InputPage> {
                         ),
                         Text(
                           weight.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 40.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -147,11 +147,9 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             InputIconButton(
                               icon: FontAwesomeIcons.minus,
-                              onPressed: (){
+                              onPressed: () {
                                 weight--;
-                                setState(() {
-
-                                });
+                                setState(() {});
                               },
                             ),
                             const SizedBox(
@@ -159,11 +157,9 @@ class _InputPageState extends State<InputPage> {
                             ),
                             InputIconButton(
                               icon: FontAwesomeIcons.plus,
-                              onPressed: (){
+                              onPressed: () {
                                 weight++;
-                                setState(() {
-
-                                });
+                                setState(() {});
                               },
                             ),
                           ],
@@ -178,7 +174,7 @@ class _InputPageState extends State<InputPage> {
                     childCard: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "AGE",
                           style: TextStyle(
                             fontSize: 20.0,
@@ -186,7 +182,7 @@ class _InputPageState extends State<InputPage> {
                         ),
                         Text(
                           age.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 40.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -196,11 +192,9 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             InputIconButton(
                               icon: FontAwesomeIcons.minus,
-                              onPressed: (){
+                              onPressed: () {
                                 age--;
-                                setState(() {
-
-                                });
+                                setState(() {});
                               },
                             ),
                             const SizedBox(
@@ -208,11 +202,9 @@ class _InputPageState extends State<InputPage> {
                             ),
                             InputIconButton(
                               icon: FontAwesomeIcons.plus,
-                              onPressed: (){
-                                  age++;
-                                  setState(() {
-
-                                  });
+                              onPressed: () {
+                                age++;
+                                setState(() {});
                               },
                             ),
                           ],
