@@ -32,7 +32,7 @@ class ResultPage extends StatelessWidget {
                   Text(
                     "Normal",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 22.0,
                       fontWeight: FontWeight.w500,
                       color: Colors.greenAccent,
@@ -41,7 +41,7 @@ class ResultPage extends StatelessWidget {
                   Text(
                     "24",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 70.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -49,7 +49,7 @@ class ResultPage extends StatelessWidget {
                   Text(
                     "Debes de comer más verduras",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.w400,
                     ),
@@ -61,6 +61,9 @@ class ResultPage extends StatelessWidget {
           ),
           NavigatorButton(
             text: "RE-CALCULATE",
+            onTap: (){
+              Navigator.pop(context);
+            },
           ),
         ],
       ),

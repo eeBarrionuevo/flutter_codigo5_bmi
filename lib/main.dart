@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           overlayColor: kPrimaryColor.withOpacity(0.25),
         ),
       ),
-      home: ResultPage(),
+      home: InputPage(),
     );
   }
 }

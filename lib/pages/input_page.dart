@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo5_bmi/pages/result_page.dart';
 import 'package:flutter_codigo5_bmi/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -219,6 +220,9 @@ class _InputPageState extends State<InputPage> {
           //Botón
           NavigatorButton(
             text: "CALCULATE",
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ResultPage()));
+            },
           ),
         ],
       ),
