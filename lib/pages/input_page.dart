@@ -99,24 +99,14 @@ class _InputPageState extends State<InputPage> {
                             ),
                           ],
                         ),
-                        SliderTheme(
-                          data: SliderThemeData(
-                            activeTrackColor: kPrimaryColor,
-                            thumbColor: kPrimaryColor,
-                            thumbShape:  const RoundSliderThumbShape(
-                                enabledThumbRadius: 17.0
-                            ),
-                            overlayColor: kPrimaryColor.withOpacity(0.25),
-                          ),
-                          child: Slider(
-                            value: height.toDouble(),
-                            min: 0,
-                            max: 200,
-                            onChanged: (double valueSlider) {
-                              height = valueSlider.round();
-                              setState(() {});
-                            },
-                          ),
+                        Slider(
+                          value: height.toDouble(),
+                          min: 0,
+                          max: 200,
+                          onChanged: (double valueSlider) {
+                            height = valueSlider.round();
+                            setState(() {});
+                          },
                         ),
                       ],
                     ),
