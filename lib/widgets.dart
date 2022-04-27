@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ReusableCard extends StatelessWidget {
+
   Widget childCard;
   Color color;
   Function? onTap;
