@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_bmi/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-const kTapSelectedColor = Color(0xff232f39);
+const kTapSelectedColor = Color(0xff373d4e);
 const kCardColor = Color(0xff1F232C);
 const kPrimaryColor = Color(0xffAB4FEE);
 
@@ -21,6 +21,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedOption = Gender.male;
   int height = 165;
+  int weight = 78;
+  int age = 29;
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +136,7 @@ class _InputPageState extends State<InputPage> {
                           ),
                         ),
                         Text(
-                          "76",
+                          weight.toString(),
                           style: TextStyle(
                             fontSize: 40.0,
                             fontWeight: FontWeight.bold,
@@ -145,20 +147,30 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             RawMaterialButton(
                               shape: CircleBorder(),
-                              fillColor: Colors.red,
+                              fillColor: kTapSelectedColor,
                               constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
-                              child: FaIcon(FontAwesomeIcons.plus),
-                              onPressed: () {},
+                              child: FaIcon(FontAwesomeIcons.minus),
+                              onPressed: () {
+                                weight--;
+                                setState(() {
+
+                                });
+                              },
                             ),
                             const SizedBox(
                               width: 20.0,
                             ),
                             RawMaterialButton(
                               shape: CircleBorder(),
-                              fillColor: Colors.red,
+                              fillColor: kTapSelectedColor,
                               constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
-                              child: FaIcon(FontAwesomeIcons.minus),
-                              onPressed: () {},
+                              child: FaIcon(FontAwesomeIcons.plus),
+                              onPressed: () {
+                                weight++;
+                                setState(() {
+
+                                });
+                              },
                             ),
                           ],
                         ),
@@ -169,7 +181,56 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: kCardColor,
-                    childCard: Container(),
+                    childCard: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "AGE",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                          ),
+                        ),
+                        Text(
+                          age.toString(),
+                          style: TextStyle(
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RawMaterialButton(
+                              shape: CircleBorder(),
+                              fillColor: kTapSelectedColor,
+                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
+                              child: FaIcon(FontAwesomeIcons.minus),
+                              onPressed: () {
+                                age--;
+                                setState(() {
+
+                                });
+                              },
+                            ),
+                            const SizedBox(
+                              width: 20.0,
+                            ),
+                            RawMaterialButton(
+                              shape: CircleBorder(),
+                              fillColor: kTapSelectedColor,
+                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
+                              child: FaIcon(FontAwesomeIcons.plus),
+                              onPressed: () {
+                                age++;
+                                setState(() {
+
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
