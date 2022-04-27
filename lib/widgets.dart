@@ -3,7 +3,6 @@ import 'package:flutter_codigo5_bmi/pages/input_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ReusableCard extends StatelessWidget {
-
   Widget childCard;
   Color color;
   Function? onTap;
@@ -34,8 +33,6 @@ class ReusableCard extends StatelessWidget {
   }
 }
 
-
-
 class IconContent extends StatelessWidget {
   String textIcon;
   IconData icon;
@@ -65,9 +62,14 @@ class IconContent extends StatelessWidget {
   }
 }
 
-
-
 class InputIconButton extends StatelessWidget {
+  IconData icon;
+  Function onPressed;
+
+  InputIconButton({
+    required this.icon,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -75,9 +77,9 @@ class InputIconButton extends StatelessWidget {
       shape: CircleBorder(),
       fillColor: kTapSelectedColor,
       constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
-      child: FaIcon(FontAwesomeIcons.minus),
+      child: FaIcon(icon),
       onPressed: () {
-
+        onPressed();
       },
     );
   }

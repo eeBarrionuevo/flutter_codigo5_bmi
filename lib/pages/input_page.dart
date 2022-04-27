@@ -145,11 +145,27 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            InputIconButton(),
+                            InputIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: (){
+                                weight--;
+                                setState(() {
+
+                                });
+                              },
+                            ),
                             const SizedBox(
                               width: 20.0,
                             ),
-                            InputIconButton(),
+                            InputIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: (){
+                                weight++;
+                                setState(() {
+
+                                });
+                              },
+                            ),
                           ],
                         ),
                       ],
@@ -178,11 +194,27 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            InputIconButton(),
+                            InputIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: (){
+                                age--;
+                                setState(() {
+
+                                });
+                              },
+                            ),
                             const SizedBox(
                               width: 20.0,
                             ),
-                            InputIconButton(),
+                            InputIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: (){
+                                  age++;
+                                  setState(() {
+
+                                  });
+                              },
+                            ),
                           ],
                         ),
                       ],
