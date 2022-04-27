@@ -84,3 +84,30 @@ class InputIconButton extends StatelessWidget {
     );
   }
 }
+
+class NavigatorButton extends StatelessWidget {
+
+  String text;
+
+  NavigatorButton({required this.text,});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80.0,
+      width: double.infinity,
+      margin: const EdgeInsets.only(top: 12.0),
+      color: kPrimaryColor,
+      alignment: Alignment.center,
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontSize: 28.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+}
+
+

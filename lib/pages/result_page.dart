@@ -11,12 +11,16 @@ class ResultPage extends StatelessWidget {
         title: Text("BMI Calculator"),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Results",
-            style: TextStyle(
-              fontSize: 40.0,
-              fontWeight: FontWeight.bold,
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              "Results",
+              style: TextStyle(
+                fontSize: 40.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Expanded(
@@ -25,19 +29,8 @@ class ResultPage extends StatelessWidget {
               color: Color(0xff1F232C),
             ),
           ),
-          Container(
-            height: 80.0,
-            width: double.infinity,
-            margin: const EdgeInsets.only(top: 12.0),
-            color: Color(0xffAB4FEE),
-            alignment: Alignment.center,
-            child: const Text(
-              "RE-CALCULATE",
-              style: TextStyle(
-                fontSize: 28.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+          NavigatorButton(
+            text: "RE-CALCULATE",
           ),
         ],
       ),

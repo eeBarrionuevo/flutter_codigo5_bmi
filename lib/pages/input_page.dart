@@ -217,19 +217,8 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           //Botón
-          Container(
-            height: 80.0,
-            width: double.infinity,
-            margin: const EdgeInsets.only(top: 12.0),
-            color: kPrimaryColor,
-            alignment: Alignment.center,
-            child: const Text(
-              "CALCULATE",
-              style: TextStyle(
-                fontSize: 28.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+          NavigatorButton(
+            text: "CALCULATE",
           ),
         ],
       ),
