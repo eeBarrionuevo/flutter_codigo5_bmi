@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo5_bmi/pages/input_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ReusableCard extends StatelessWidget {
@@ -60,6 +61,24 @@ class IconContent extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+
+
+class InputIconButton extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      shape: CircleBorder(),
+      fillColor: kTapSelectedColor,
+      constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
+      child: FaIcon(FontAwesomeIcons.minus),
+      onPressed: () {
+
+      },
     );
   }
 }

@@ -145,33 +145,11 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            RawMaterialButton(
-                              shape: CircleBorder(),
-                              fillColor: kTapSelectedColor,
-                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
-                              child: FaIcon(FontAwesomeIcons.minus),
-                              onPressed: () {
-                                weight--;
-                                setState(() {
-
-                                });
-                              },
-                            ),
+                            InputIconButton(),
                             const SizedBox(
                               width: 20.0,
                             ),
-                            RawMaterialButton(
-                              shape: CircleBorder(),
-                              fillColor: kTapSelectedColor,
-                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
-                              child: FaIcon(FontAwesomeIcons.plus),
-                              onPressed: () {
-                                weight++;
-                                setState(() {
-
-                                });
-                              },
-                            ),
+                            InputIconButton(),
                           ],
                         ),
                       ],
@@ -200,33 +178,11 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            RawMaterialButton(
-                              shape: CircleBorder(),
-                              fillColor: kTapSelectedColor,
-                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
-                              child: FaIcon(FontAwesomeIcons.minus),
-                              onPressed: () {
-                                age--;
-                                setState(() {
-
-                                });
-                              },
-                            ),
+                            InputIconButton(),
                             const SizedBox(
                               width: 20.0,
                             ),
-                            RawMaterialButton(
-                              shape: CircleBorder(),
-                              fillColor: kTapSelectedColor,
-                              constraints: BoxConstraints.tightFor(width: 50.0, height: 50.0),
-                              child: FaIcon(FontAwesomeIcons.plus),
-                              onPressed: () {
-                                age++;
-                                setState(() {
-
-                                });
-                              },
-                            ),
+                            InputIconButton(),
                           ],
                         ),
                       ],
