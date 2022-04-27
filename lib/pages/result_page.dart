@@ -25,7 +25,37 @@ class ResultPage extends StatelessWidget {
           ),
           Expanded(
             child: ReusableCard(
-              childCard: Container(),
+              childCard: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    "Normal",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.greenAccent,
+                    ),
+                  ),
+                  Text(
+                    "24",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 70.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Debes de comer más verduras",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
               color: Color(0xff1F232C),
             ),
           ),
