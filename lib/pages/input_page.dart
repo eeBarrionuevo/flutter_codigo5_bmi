@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const kTapSelectedColor = Color(0xff232f39);
 const kCardColor = Color(0xff1F232C);
+const kPrimaryColor = Color(0xffAB4FEE);
 
 enum Gender {
   male,
@@ -18,7 +19,6 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-
   Gender selectedOption = Gender.male;
   int height = 165;
 
@@ -82,16 +82,41 @@ class _InputPageState extends State<InputPage> {
                         Text(
                           "HEIGHT",
                         ),
-                        Slider(
-                          value: height.toDouble(),
-                          min: 0,
-                          max: 200,
-                          onChanged: (double valueSlider){
-                            height = valueSlider.round();
-                            setState(() {
-
-                            });
-                          },
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          textBaseline: TextBaseline.alphabetic,
+                          children: [
+                            Text(
+                              height.toString(),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 40.0
+                              ),
+                            ),
+                            Text(
+                              " cm"
+                            ),
+                          ],
+                        ),
+                        SliderTheme(
+                          data: SliderThemeData(
+                            activeTrackColor: kPrimaryColor,
+                            thumbColor: kPrimaryColor,
+                            thumbShape:  const RoundSliderThumbShape(
+                                enabledThumbRadius: 17.0
+                            ),
+                            overlayColor: kPrimaryColor.withOpacity(0.25),
+                          ),
+                          child: Slider(
+                            value: height.toDouble(),
+                            min: 0,
+                            max: 200,
+                            onChanged: (double valueSlider) {
+                              height = valueSlider.round();
+                              setState(() {});
+                            },
+                          ),
                         ),
                       ],
                     ),
@@ -124,7 +149,7 @@ class _InputPageState extends State<InputPage> {
             height: 80.0,
             width: double.infinity,
             margin: const EdgeInsets.only(top: 12.0),
-            color: const Color(0xffAB4FEE),
+            color: kPrimaryColor,
             alignment: Alignment.center,
             child: const Text(
               "CALCULATE",
