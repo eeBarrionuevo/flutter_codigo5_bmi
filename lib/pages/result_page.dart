@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_bmi/widgets.dart';
 
 class ResultPage extends StatelessWidget {
-  const ResultPage({Key? key}) : super(key: key);
+
+  int height;
+  int weight;
+
+  ResultPage({
+    required this.height,
+    required this.weight,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +68,7 @@ class ResultPage extends StatelessWidget {
           ),
           NavigatorButton(
             text: "RE-CALCULATE",
-            onTap: (){
+            onTap: () {
               Navigator.pop(context);
             },
           ),
