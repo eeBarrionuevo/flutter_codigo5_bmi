@@ -46,7 +46,7 @@ class ResultPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    "Normal",
+                    bmiBrain!.getResult(),
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 22.0,
@@ -63,7 +63,7 @@ class ResultPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Debes de comer más verduras",
+                    bmiBrain!.getInterpretation(),
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 18.0,
